@@ -70,5 +70,11 @@
             <!--provided 只编译认证 不打包-->
             <scope>provided</scope>
         </dependency>
+        <!--添加第三方组件 json转换-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.5</version>
+        </dependency>
     </dependencies>
 </project>
