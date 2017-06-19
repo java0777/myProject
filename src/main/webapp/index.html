@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>主页</title>
+    <script src="/js/jquery.min.js"></script>
 </head>
 <body>
-网站主页
+<button onclick="foo()">查询</button>
+<table id="userList">
+    <tr>
+        <td>用户编号</td>
+        <td>用户名</td>
+        <td>密码</td>
+    </tr>
+</table>
+<script>
+    function foo() {
+        var demo = $("#userList");
+        $.get("/test").success(function (data) {
+            $.each(data,function (index,item) {
+                var tr="<tr>";
+                tr+="<td>"+item.user_id+"<td>";
+                tr+="<td>"+item.user_name+"<td>";
+                tr+="<td>"+item.password+"<td>";
+                tr+="</tr>"
+                demo.append(tr);
+            })
+
+        })
+    }
+</script>
 </body>
 </html>

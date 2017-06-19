@@ -9,4 +9,6 @@
     <!--激活发布web服务的能力 一系列注解
     如 RequestMapping-->
     <mvc:annotation-driven/>
+  <!--  在requestMapping中找不到，交给tomcat到静态资源里面找-->
+    <mvc:default-servlet-handler/>
 </beans>
